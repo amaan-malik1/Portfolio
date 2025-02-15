@@ -11,7 +11,7 @@ const Projects = () => {
 
       <h2 className='project-h2'>Project</h2>
       <p className='project-p'>Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, magni ex? Ipsam saepe vel ratione? Deserunt eum aspernatur quos dolorem! ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repudiandae qui deleniti esse laborum tempora ad atque ea facere quod!</p>
-      <div className="projects-container">
+{/*       <div className="projects-container">
 
         <div className="project-item">
           <img src={project1} alt="" />
@@ -30,23 +30,17 @@ const Projects = () => {
           <h3>CLone</h3>
           <button className="btn-project">Check It</button>
         </div>
-      </div>
+      </div> */}
       <div className="project-links" >
-        <span>More projects</span>
+        <span>Projects</span>
 
         <a href="https://virtualr-navy.vercel.app/" target="_blank" rel="noopener noreferrer">VR- front-End
         </a>
-        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-          Restraut appliation front-end
+        <a href="https://pass-op-rho.vercel.app/" target="_blank" rel="noopener noreferrer">
+          Password Manager
         </a>
-        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-          Go to page 3
-        </a>
-        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-          Go to page 4
-        </a>
-        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-          Go to page 5
+        <a href="https://coffee-app-ochre.vercel.app/" target="_blank" rel="noopener noreferrer">
+         Coffee App
         </a>
       </div>
     </div>
