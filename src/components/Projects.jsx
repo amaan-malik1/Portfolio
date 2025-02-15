@@ -10,7 +10,9 @@ const Projects = () => {
     <div className='projects'>
 
       <h2 className='project-h2'>Project</h2>
-      <p className='project-p'>Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, magni ex? Ipsam saepe vel ratione? Deserunt eum aspernatur quos dolorem! ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repudiandae qui deleniti esse laborum tempora ad atque ea facere quod!</p>
+      <p className='project-p'>Check out all the project that i have build are below. I have just started posting them over it. Currently enhancing my skills.
+      
+      </p>
 {/*       <div className="projects-container">
 
         <div className="project-item">
