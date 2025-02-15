@@ -19,19 +19,19 @@ const Skills = () => {
           <div className='skills-container'>
             <div className="item">
               <img src={meter1} alt="" />
-              <h4>Web development </h4>
+              <h4>Front-End</h4>
             </div>
             <div className="item">
               <img src={meter2} alt="" />
-              <h4>Front-End </h4>
+              <h4>Backend</h4>
             </div>
             <div className="item">
               <img src={meter3} alt="" />
-              <h4>Logo design </h4>
+              <h4>Responsive</h4>
             </div>
             <div className="item">
-              <img src={meter1} alt="" />
-              <h4>Web.3</h4>
+              <img src={meter2} alt="" />
+              <h4>Learning Web.3</h4>
             </div>
           </div>
         </div>
