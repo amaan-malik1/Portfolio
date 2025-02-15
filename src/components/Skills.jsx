@@ -14,7 +14,11 @@ const Skills = () => {
           <h2>
             Skills
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nesciunt ullam, praesentium commodi ea a saepe ducimus voluptatum sed placeat?</p>
+          <p>A passionate Full-Stack Web Developerspecializing in the MERN stack. I love building scalable applications and continuously enhancing my skills.
+
+📖 Currently working on a Urdu-to-English dictionary website with database automation.
+
+🚀 Future goals: Creating **AI-driven products and cryptocurrency-based projects**.</p>
 
           <div className='skills-container'>
             <div className="item">
