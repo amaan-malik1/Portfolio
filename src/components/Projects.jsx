@@ -13,26 +13,7 @@ const Projects = () => {
       <p className='project-p'>Check out all the project that i have build are below. I have just started posting them over it. Currently enhancing my skills.
       
       </p>
-{/*       <div className="projects-container">
 
-        <div className="project-item">
-          <img src={project1} alt="" />
-          <h3>My Protfolio</h3>
-          <button className="btn-project">Check It</button>
-        </div>
-
-        <div className="project-item">
-          <img src={project2} alt="" />
-          <h3>DEX Front-End</h3>
-          <button className="btn-project">Check It</button>
-        </div>
-
-        <div className="project-item">
-          <img src={project3} alt="" />
-          <h3>CLone</h3>
-          <button className="btn-project">Check It</button>
-        </div>
-      </div> */}
       <div className="project-links" >
         <span>Projects</span>
 
