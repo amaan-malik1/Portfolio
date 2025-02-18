@@ -36,7 +36,11 @@
     align-items: center;
 
 }
-
+@media (max-width:450px){
+.skills-container {
+    flex-direction:column;
+}
+}
 .skills-container .item img {
     width: 50%;
     margin: 0 auto 15px auto;
