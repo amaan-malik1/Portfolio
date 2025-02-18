@@ -92,3 +92,9 @@ button {
     background: rgb(49, 49, 49);
     color: white;
 }
+
+@media (max-width:450px){
+    .nav-container{
+            flex-direction: column;
+    }
+}
