@@ -38,7 +38,9 @@
 }
 @media (max-width:450px){
 .skills-container {
-    flex-direction:column;
+        flex-wrap: wrap;
+    gap: 1rem;
+
 }
     .skills p {
         font-size:18px;
