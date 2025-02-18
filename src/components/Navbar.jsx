@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className='nav-container'>
-                <div className='logo'>Logo</div>
+                <div className='logo'>Amaan</div>
                 <ul className='list-container'>
                     <li>
                         <NavLink to={'/'} className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink>
