@@ -1,55 +1,48 @@
 import React from 'react';
+import { FiArrowRightCircle } from 'react-icons/fi';
 import { motion } from 'framer-motion';
-import { FiArrowRightCircle } from "react-icons/fi";
 import headerImg from './assets/headerImg.png';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-blue-50 flex flex-col md:flex-row items-center justify-center px-6 py-12 space-y-10 md:space-y-0 md:space-x-10 overflow-hidden">
-
-      {/* Left Section */}
-      <motion.div
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="max-w-xl space-y-6"
+    <div className="flex flex-col md:flex-row justify-between items-center px-6 py-12 bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen">
+      {/* Left Part */}
+      <motion.div 
+        initial={{ opacity: 0, x: -50 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 0.6 }} 
+        className="max-w-xl"
       >
-        <span className="inline-block bg-blue-200 text-blue-700 text-sm px-3 py-1 rounded-full font-semibold shadow">
-          👋 Welcome to my profile
-        </span>
-
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-          Hi, I'm <span className="text-blue-600">Amaan Malik</span>
-        </h1>
-
-        <p className="text-lg text-gray-600">
-          A passionate <strong className="text-blue-500">Full-Stack Web Developer</strong> specializing in the <span className="font-medium">MERN stack</span>. I build scalable applications and continuously improve my skills.
+        <span className="inline-block bg-yellow-500 text-black font-semibold px-4 py-1 rounded-full mb-4">Welcome to my profile</span>
+        <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">Hi, I'm Amaan Malik</h2>
+        <p className="text-lg text-gray-300 mb-6">
+          A passionate Full-Stack Web Developer specializing in the MERN stack. I love building scalable applications and continuously enhancing my skills.
+          <br /><br />
+          📖 Currently working on a Urdu-to-English dictionary website with database automation.
+          <br /><br />
+          🚀 Future goals: Creating <span className="font-semibold text-white">AI-driven products</span> and <span className="font-semibold text-white">cryptocurrency-based projects</span>.
         </p>
 
-        <ul className="list-disc ml-5 text-gray-700 text-base space-y-1">
-          <li>📖 Building a <strong>Urdu-to-English dictionary</strong> with automated database.</li>
-          <li>🚀 Aiming to create <strong>AI products</strong> and <strong>crypto-based projects</strong>.</li>
-        </ul>
-
         <motion.button
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="group inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold shadow hover:bg-blue-700 transition"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all"
         >
-          Let’s Connect
-          <FiArrowRightCircle className="text-xl group-hover:translate-x-1 transition" />
+          Let's Connect <FiArrowRightCircle className="text-xl" />
         </motion.button>
       </motion.div>
 
-      {/* Right Section */}
+      {/* Right Part */}
       <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="w-full max-w-sm"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="mt-10 md:mt-0"
       >
-        <img src={headerImg} alt="Developer" className="w-full h-auto rounded-xl shadow-xl" />
+        <img src={headerImg} alt="Header-Img" className="w-full max-w-md md:max-w-lg" />
       </motion.div>
     </div>
   );
-}
+};
+
+export default Home;
