@@ -1,13 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { FiCode, FiServer, FiSmartphone, FiCpu, FiDatabase, FiLock } from 'react-icons/fi';
-=======
-import meter1 from './assets/meter1.png';
-import meter2 from './assets/meter2.png';
-import meter3 from './assets/meter3.png';
-import colorSharpe from './assets/colorSharpe.png';
->>>>>>> e3417ca0831ddb9c95b5bb80b3f21c4d310af139
 
 const Skills = () => {
   const skillsData = [
@@ -15,7 +8,7 @@ const Skills = () => {
       title: "Front-End Development",
       icon: <FiCode className="w-8 h-8" />,
       progress: 90,
-      tech: ["React","Framer motion", "Tailwind", "Redux", "JavaScript"],
+      tech: ["React", "Framer motion", "Tailwind", "Redux", "JavaScript"],
       color: "bg-blue-500"
     },
     {
@@ -42,12 +35,18 @@ const Skills = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <section className="relative py-20 px-4 bg-gray-900 text-white overflow-hidden">
+    <section id="skills" className="relative py-20 px-4 bg-gray-900 text-white overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-20 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
+      </div>
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -61,42 +60,47 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillsData.map((skill, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative bg-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-xl transition-shadow"
+              className="group relative bg-gray-800/70 backdrop-blur-sm p-6 rounded-xl shadow-2xl hover:shadow-xl transition-shadow border border-gray-700/50"
             >
               <div className="mb-6 text-4xl text-blue-400">
                 {skill.icon}
               </div>
-              
+
               <h3 className="text-xl font-semibold mb-4">{skill.title}</h3>
-              
+
               {/* Animated Progress Bar */}
               <div className="h-2 bg-gray-700 rounded-full mb-4 overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.progress}%` }}
-                  transition={{ duration: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
                   className={`h-full ${skill.color} rounded-full`}
                 />
               </div>
-              
+
               <span className="text-sm text-gray-400">{skill.progress}% Proficiency</span>
 
               {/* Tech Stack */}
-              <div className="mt-6 pt-4 border-t border-gray-700">
+              <div className="mt-6 pt-4 border-t border-gray-700/50">
                 <div className="flex flex-wrap gap-2">
                   {skill.tech.map((tech, techIndex) => (
-                    <span 
+                    <motion.span
                       key={techIndex}
-                      className="px-3 py-1 text-sm bg-gray-700 rounded-full"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 + (techIndex * 0.05) }}
+                      className="px-3 py-1 text-sm bg-gray-700/50 rounded-full"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -109,91 +113,36 @@ const Skills = () => {
 
         {/* Additional Skills Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-20 max-w-3xl mx-auto grid md:grid-cols-2 gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20 max-w-4xl mx-auto grid md:grid-cols-2 gap-8"
         >
-          <div className="p-6 bg-gray-800 rounded-xl">
+          <div className="p-6 bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-700/50">
             <div className="flex items-center gap-4 mb-4">
               <FiDatabase className="w-6 h-6 text-green-400" />
               <h4 className="text-xl font-semibold">Current Project</h4>
             </div>
-            <p className="text-gray-400">
-              Building an Notes Taking application with automated database 
+            <p className="text-gray-300">
+              Building an Notes Taking application with automated database
               management and AI-powered searching and context providing features.
             </p>
           </div>
 
-          <div className="p-6 bg-gray-800 rounded-xl">
+          <div className="p-6 bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-700/50">
             <div className="flex items-center gap-4 mb-4">
               <FiLock className="w-6 h-6 text-purple-400" />
               <h4 className="text-xl font-semibold">Future Focus</h4>
             </div>
-            <p className="text-gray-400">
-              Developing AI-driven applications and exploring blockchain 
+            <p className="text-gray-300">
+              Developing AI-driven applications and exploring blockchain
               technology for decentralized solutions.
             </p>
           </div>
         </motion.div>
       </div>
-
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
-      </div>
-=======
-    <section className="relative py-16 px-6 bg-gray-900 text-white overflow-hidden">
-      <motion.div 
-        initial={{ opacity: 0, y: 50 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto text-center z-10 relative"
-      >
-        <h2 className="text-4xl font-bold mb-6">Skills</h2>
-        <p className="text-lg text-gray-300 mb-12">
-          A passionate Full-Stack Web Developer specializing in the MERN stack. I love building scalable applications and continuously enhancing my skills.
-          <br /><br />
-          📖 Currently working on a Urdu-to-English dictionary website with database automation.
-          <br /><br />
-          🚀 Future goals: Creating <span className="text-white font-semibold">AI-driven products</span> and <span className="text-white font-semibold">cryptocurrency-based projects</span>.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          <motion.div whileHover={{ scale: 1.05 }} className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <img src={meter1} alt="Front-End" className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold">Front-End</h4>
-          </motion.div>
-
-          <motion.div whileHover={{ scale: 1.05 }} className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <img src={meter2} alt="Backend" className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold">Backend</h4>
-          </motion.div>
-
-          <motion.div whileHover={{ scale: 1.05 }} className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <img src={meter3} alt="Responsive" className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold">Responsive</h4>
-          </motion.div>
-
-          <motion.div whileHover={{ scale: 1.05 }} className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <img src={meter2} alt="Web3" className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold">Learning Web.3</h4>
-          </motion.div>
-        </div>
-      </motion.div>
-
-      <img 
-        src={colorSharpe} 
-        alt="Background Shape" 
-        className="absolute left-0 bottom-0 w-60 opacity-20 pointer-events-none"
-      />
->>>>>>> e3417ca0831ddb9c95b5bb80b3f21c4d310af139
     </section>
   );
 };
 
-<<<<<<< HEAD
 export default Skills;
-=======
-export default Skills;
->>>>>>> e3417ca0831ddb9c95b5bb80b3f21c4d310af139
