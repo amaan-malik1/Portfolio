@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 
 
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         <Home />
         <Skills />
         <Projects />
-        <Footer/>
+        <Footer />
       </div>
     // here we write the component that we wants  to show         
   },
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Skills />
-        <Footer/>
+        <Footer />
       </div>
     // here we write the component that we wants  to show         
   },
@@ -38,7 +39,17 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Projects />
-        <Footer/>
+        <Footer />
+      </div>
+    // here we write the component that we wants  to show         
+  },
+  {
+    path: '/contact',    //path for projects
+    element:
+      <div>
+        <Navbar />
+        <Contact />
+        <Footer />
       </div>
     // here we write the component that we wants  to show         
   },

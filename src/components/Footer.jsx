@@ -1,52 +1,47 @@
-import React from 'react';
-import { communityLinks, platformLinks, resourcesLinks } from './constants/index'
-
+import { motion } from 'framer-motion';
 
 const Footer = () => {
-    return (
-        <div className="bg-black">
-            <footer className="mt-20 border-t py-10 border-neutral-700 ">
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
-                    <div>
-                        <h3 className="text-md font-semibold mb-4">Resources</h3>
-                        <ul className="space-y-2 ">
-                            {resourcesLinks.flatMap((link, index) => (
-                                <li key={index}>
-                                    <a href={link.href} className="text-base text-neutral-300 hover:text-white">
-                                        {link.text}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="text-md font-semibold mb-4">Platform</h3>
-                        <ul className="space-y-2 ">
-                            {platformLinks.map((link, index) => (
-                                <li key={index}>
-                                    <a href={link.href} className="text-base text-neutral-300 hover:text-white">
-                                        {link.text}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="text-md font-semibold mb-4">Community</h3>
-                        <ul className="space-y-2 ">
-                            {communityLinks.map((link, index) => (
-                                <li key={index}>
-                                    <a href={link.href} className="text-base text-neutral-300 hover:text-white">
-                                        {link.text}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    )
-}
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
 
-export default Footer
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 }
+  };
+
+  return (
+    <motion.footer 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      className="border-t border-gray-800 bg-gradient-to-b from-gray-900 to-gray-950"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      
+        {/* Copyright Section */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="mt-12 pt-8 border-t border-gray-800 text-center"
+        >
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} Amaan Malik. All rights reserved.
+            <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Building the future of web experiences
+            </span>
+          </p>
+        </motion.div>
+      </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;
